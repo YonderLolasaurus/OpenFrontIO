@@ -2,6 +2,7 @@ import { getServerConfigFromServer } from "../core/configuration/ConfigLoader";
 import {
   Difficulty,
   Duos,
+  Fives,
   GameMapName,
   GameMapSize,
   GameMapType,
@@ -9,6 +10,7 @@ import {
   GameType,
   HumansVsNations,
   Quads,
+  Sixes,
   Trios,
 } from "../core/game/Game";
 import { PseudoRandom } from "../core/PseudoRandom";
@@ -68,6 +70,8 @@ const TEAM_COUNTS = [
   Duos,
   Trios,
   Quads,
+  Fives,
+  Sixes,
   HumansVsNations,
 ] as const satisfies TeamCountConfig[];
 

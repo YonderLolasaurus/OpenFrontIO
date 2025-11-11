@@ -3,6 +3,7 @@ import { z } from "zod";
 import {
   Difficulty,
   Duos,
+  Fives,
   Game,
   GameMapType,
   GameMode,
@@ -13,6 +14,7 @@ import {
   PlayerInfo,
   PlayerType,
   Quads,
+  Sixes,
   TerrainType,
   TerraNullius,
   Tick,
@@ -195,6 +197,12 @@ export abstract class DefaultServerConfig implements ServerConfig {
         p -= p % 3;
         break;
       case Quads:
+        p -= p % 4;
+        break;
+      case Fives:
+        p -= p % 4;
+        break;
+      case Sixes:
         p -= p % 4;
         break;
       case HumansVsNations:

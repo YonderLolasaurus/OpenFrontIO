@@ -10,12 +10,14 @@ import {
   AllPlayers,
   Difficulty,
   Duos,
+  Fives,
   GameMapSize,
   GameMapType,
   GameMode,
   GameType,
   HumansVsNations,
   Quads,
+  Sixes,
   Trios,
   UnitType,
 } from "./game/Game";
@@ -150,6 +152,8 @@ const TeamCountConfigSchema = z.union([
   z.literal(Duos),
   z.literal(Trios),
   z.literal(Quads),
+  z.literal(Fives),
+  z.literal(Sixes),
   z.literal(HumansVsNations),
 ]);
 export type TeamCountConfig = z.infer<typeof TeamCountConfigSchema>;

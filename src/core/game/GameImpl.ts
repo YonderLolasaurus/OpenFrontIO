@@ -12,6 +12,7 @@ import {
   Duos,
   EmojiMessage,
   Execution,
+  Fives,
   Game,
   GameMode,
   GameUpdates,
@@ -24,6 +25,7 @@ import {
   PlayerInfo,
   PlayerType,
   Quads,
+  Sixes,
   Team,
   TerrainType,
   TerraNullius,
@@ -124,6 +126,12 @@ export class GameImpl implements Game {
           break;
         case Quads:
           numPlayerTeams = Math.ceil(players / 4);
+          break;
+        case Fives:
+          numPlayerTeams = Math.ceil(players / 5);
+          break;
+        case Sixes:
+          numPlayerTeams = Math.ceil(players / 6);
           break;
         default:
           throw new Error(`Unknown TeamCountConfig ${numPlayerTeams}`);
