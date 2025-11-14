@@ -834,17 +834,24 @@ export class HostLobbyModal extends LitElement {
   }
 
   private async copyToClipboard() {
+    const textToCopy = `http://172.28.178.93:9000/#join=${this.lobbyId}`;
+
     try {
-      //TODO: Convert id to url and copy
-      await navigator.clipboard.writeText(
-        `${location.origin}/#join=${this.lobbyId}`,
-      );
+      await navigator.clipboard.writeText(textToCopy);
       this.copySuccess = true;
-      setTimeout(() => {
-        this.copySuccess = false;
-      }, 2000);
     } catch (err) {
-      console.error(`Failed to copy text: ${err}`);
+      const temp = document.createElement("textarea");
+      temp.value = textToCopy;
+      temp.style.position = "fixed";
+      temp.style.opacity = "0";
+      document.body.appendChild(temp);
+
+      temp.focus();
+      temp.select();
+      document.execCommand("copy");
+
+      document.body.removeChild(temp);
+      this.copySuccess = true;
     }
   }
 
