@@ -219,31 +219,46 @@ export class PlayerView {
       } satisfies ColorPalette;
     }
 
-    if (this.team() === null) {
+    // Always grey for bots
+    if (this.type() === PlayerType.Bot) {
+      this._territoryColor = colord("#808080"); // neutral grey
+      this._borderColor = colord("#666666"); // darker border
+      this._defendedBorderColors = {
+        light: colord("#808080"),
+        dark: colord("#4d4d4d"),
+      };
+    } else if (this.team() === null) {
+      // FFA humans and FakeHumans (nations) keep unique cosmetic colors
       this._territoryColor = colord(
         this.cosmetics.color?.color ??
           this.cosmetics.pattern?.colorPalette?.primaryColor ??
           defaultTerritoryColor.toHex(),
       );
+
+      const maybeFocusedBorderColor =
+        this.game.myClientID() === this.data.clientID
+          ? this.game.config().theme().focusedBorderColor()
+          : defaultBorderColor;
+
+      this._borderColor = new Colord(
+        this.cosmetics.pattern?.colorPalette?.secondaryColor ??
+          this.cosmetics.color?.color ??
+          maybeFocusedBorderColor.toHex(),
+      );
+
+      this._defendedBorderColors = this.game
+        .config()
+        .theme()
+        .defendedBorderColors(this._borderColor);
     } else {
+      // Team games: use team colors for humans/FakeHumans
       this._territoryColor = defaultTerritoryColor;
+      this._borderColor = defaultBorderColor;
+      this._defendedBorderColors = this.game
+        .config()
+        .theme()
+        .defendedBorderColors(this._borderColor);
     }
-
-    const maybeFocusedBorderColor =
-      this.game.myClientID() === this.data.clientID
-        ? this.game.config().theme().focusedBorderColor()
-        : defaultBorderColor;
-
-    this._borderColor = new Colord(
-      pattern?.colorPalette?.secondaryColor ??
-        this.cosmetics.color?.color ??
-        maybeFocusedBorderColor.toHex(),
-    );
-
-    this._defendedBorderColors = this.game
-      .config()
-      .theme()
-      .defendedBorderColors(this._borderColor);
 
     this.decoder =
       this.cosmetics.pattern === undefined
