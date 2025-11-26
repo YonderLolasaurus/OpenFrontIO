@@ -29,6 +29,7 @@ var maps = []struct {
 	{Name: "europeclassic"},
 	{Name: "falklandislands"},
 	{Name: "faroeislands"},
+	{Name: "fourislands"},
 	{Name: "gatewaytotheatlantic"},
 	{Name: "giantworldmap"},
 	{Name: "halkidiki"},
@@ -46,11 +47,11 @@ var maps = []struct {
 	{Name: "straitofgibraltar"},
 	{Name: "norse"},
 	{Name: "world"},
-	{Name: "yenisei"},
 	{Name: "big_plains", IsTest: true},
 	{Name: "half_land_half_ocean", IsTest: true},
 	{Name: "ocean_and_land", IsTest: true},
 	{Name: "plains", IsTest: true},
+	{Name: "giantworldmap", IsTest: true},
 }
 
 func outputMapDir(isTest bool) (string, error) {
