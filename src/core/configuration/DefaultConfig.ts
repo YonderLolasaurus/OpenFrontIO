@@ -79,6 +79,8 @@ const numPlayersConfig = {
   [GameMapType.SouthAmerica]: [70, 50, 40],
   [GameMapType.StraitOfGibraltar]: [100, 70, 50],
   [GameMapType.World]: [50, 30, 20],
+  [GameMapType.Norse]: [50, 30, 20],
+  [GameMapType.Arabia]: [50, 30, 20],
   [GameMapType.Yenisei]: [150, 100, 70],
 } as const satisfies Record<GameMapType, [number, number, number]>;
 

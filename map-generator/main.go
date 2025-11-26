@@ -14,6 +14,7 @@ var maps = []struct {
 	IsTest bool
 }{
 	{Name: "africa"},
+	{Name: "arabia"},
 	{Name: "asia"},
 	{Name: "australia"},
 	{Name: "achiran"},
@@ -43,6 +44,7 @@ var maps = []struct {
 	{Name: "pluto"},
 	{Name: "southamerica"},
 	{Name: "straitofgibraltar"},
+	{Name: "norse"},
 	{Name: "world"},
 	{Name: "yenisei"},
 	{Name: "big_plains", IsTest: true},

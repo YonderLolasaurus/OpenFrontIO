@@ -38,6 +38,8 @@ export const MapDescription: Record<keyof typeof GameMapType, string> = {
   Montreal: "Montreal",
   Achiran: "Achiran",
   BaikalNukeWars: "Baikal (Nuke Wars)",
+  Norse: "Norse",
+  Arabia: "Arabia",
 };
 
 @customElement("map-display")

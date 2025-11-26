@@ -102,6 +102,8 @@ export enum GameMapType {
   Pluto = "Pluto",
   Montreal = "Montreal",
   Achiran = "Achiran",
+  Norse = "Norse",
+  Arabia = "Arabia",
   BaikalNukeWars = "Baikal (Nuke Wars)",
 }
 
@@ -137,6 +139,8 @@ export const mapCategories: Record<string, GameMapType[]> = {
     GameMapType.Japan,
     GameMapType.Yenisei,
     GameMapType.Montreal,
+    GameMapType.Norse,
+    GameMapType.Arabia,
   ],
   fantasy: [
     GameMapType.Pangaea,

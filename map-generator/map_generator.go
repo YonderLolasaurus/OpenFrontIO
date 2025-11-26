@@ -13,7 +13,7 @@ import (
 )
 
 const (
-	minIslandSize = 30
+	minIslandSize = 200
 	minLakeSize   = 200
 )
 

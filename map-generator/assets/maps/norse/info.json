@@ -1,0 +1,113 @@
+{
+  "name": "Norse",
+  "nations": [
+    {
+      "coordinates": [1020, 120],
+      "flag": "no",
+      "name": "Wulfing",
+      "strength": 2
+    },
+    {
+      "coordinates": [1300, 90],
+      "flag": "no",
+      "name": "Scylfing",
+      "strength": 2
+    },
+    {
+      "coordinates": [990, 243],
+      "flag": "no",
+      "name": "Skjoldung",
+      "strength": 2
+    },
+    {
+      "coordinates": [1264, 256],
+      "flag": "no",
+      "name": "Volsung",
+      "strength": 2
+    },
+    {
+      "coordinates": [1100, 310],
+      "flag": "no",
+      "name": "Lothbrok",
+      "strength": 2
+    },
+    {
+      "coordinates": [1206, 445],
+      "flag": "no",
+      "name": "Haraldson",
+      "strength": 2
+    },
+    {
+      "coordinates": [841, 769],
+      "flag": "fr",
+      "name": "Normans",
+      "strength": 2
+    },
+    {
+      "coordinates": [1253, 577],
+      "flag": "fr",
+      "name": "Freyr",
+      "strength": 2
+    },
+    {
+      "coordinates": [580, 540],
+      "flag": "no",
+      "name": "Bjornsson",
+      "strength": 1
+    },
+    {
+      "coordinates": [515, 470],
+      "flag": "no",
+      "name": "Eyvindsson",
+      "strength": 1
+    },
+    {
+      "coordinates": [490, 370],
+      "flag": "no",
+      "name": "Ericsson",
+      "strength": 3
+    },
+    {
+      "coordinates": [1040, 790],
+      "flag": "fr",
+      "name": "Gauls",
+      "strength": 3
+    },
+    {
+      "coordinates": [190, 540],
+      "flag": "ie",
+      "name": "Eile",
+      "strength": 3
+    },
+    {
+      "coordinates": [240, 595],
+      "flag": "ie",
+      "name": "Dunlainge",
+      "strength": 3
+    },
+    {
+      "coordinates": [185, 665],
+      "flag": "ie",
+      "name": "OMullens",
+      "strength": 3
+    },
+    {
+      "coordinates": [360, 417],
+      "flag": "gb-sct",
+      "name": "William Wallace",
+      "strength": 3
+    },
+    {
+      "coordinates": [450, 675],
+      "flag": "gb-wls",
+      "name": "Celts",
+      "strength": 3
+    },
+    {
+      "coordinates": [545, 696],
+      "flag": "gb-eng",
+      "name": "Saxons",
+      "strength": 3
+    }
+  ]
+}
