@@ -822,13 +822,13 @@ export class DefaultConfig implements Config {
     if (playerInfo.playerType === PlayerType.FakeHuman) {
       switch (this._gameConfig.difficulty) {
         case Difficulty.Easy:
-          return 2_500 * (playerInfo?.nation?.strength ?? 1);
+          return 11_000 * (playerInfo?.nation?.strength ?? 1);
         case Difficulty.Medium:
-          return 5_000 * (playerInfo?.nation?.strength ?? 1);
+          return 12_000 * (playerInfo?.nation?.strength ?? 1);
         case Difficulty.Hard:
-          return 20_000 * (playerInfo?.nation?.strength ?? 1);
+          return 13_000 * (playerInfo?.nation?.strength ?? 1);
         case Difficulty.Impossible:
-          return 50_000 * (playerInfo?.nation?.strength ?? 1);
+          return 14_000 * (playerInfo?.nation?.strength ?? 1);
       }
     }
     return this.infiniteTroops() ? 1_000_000 : 25_000;
@@ -855,13 +855,13 @@ export class DefaultConfig implements Config {
 
     switch (this._gameConfig.difficulty) {
       case Difficulty.Easy:
-        return maxTroops * 0.5;
+        return maxTroops * 1.05;
       case Difficulty.Medium:
-        return maxTroops * 1;
+        return maxTroops * 1.1;
       case Difficulty.Hard:
-        return maxTroops * 1.5;
+        return maxTroops * 1.15;
       case Difficulty.Impossible:
-        return maxTroops * 2;
+        return maxTroops * 1.2;
     }
   }
 
@@ -880,16 +880,16 @@ export class DefaultConfig implements Config {
     if (player.type() === PlayerType.FakeHuman) {
       switch (this._gameConfig.difficulty) {
         case Difficulty.Easy:
-          toAdd *= 0.9;
-          break;
-        case Difficulty.Medium:
-          toAdd *= 1;
-          break;
-        case Difficulty.Hard:
           toAdd *= 1.1;
           break;
-        case Difficulty.Impossible:
+        case Difficulty.Medium:
+          toAdd *= 1.15;
+          break;
+        case Difficulty.Hard:
           toAdd *= 1.2;
+          break;
+        case Difficulty.Impossible:
+          toAdd *= 1.25;
           break;
       }
     }
